@@ -55,16 +55,26 @@ public class CP1 {
 			System.out.print("Enter Last Name:  ");
 			iLastname = myScanner.next();
 			
+			try {
 			//Prompt input and convert hours
 			System.out.print("Enter Hours:  ");
 			iString = myScanner.next();
 			cHours = Integer.parseInt(iString);
-									
+}
+			catch (Exception e) {
+				System.out.println("Hours must be a whole number, defaulted to 0");
+			cHours = 0;
+			}
+			try {
 			//prompt input and convert rate
 			System.out.print("Enter Rate:  ");
 			iString = myScanner.next();
 			cRate = Double.parseDouble(iString);
-			
+			}
+			catch (Exception e) {
+				System.out.println("rate must be a decimal number, default 0");
+				cRate = 0;
+			}
 			
 			
 		}
